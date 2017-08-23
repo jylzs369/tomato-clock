@@ -1,22 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // module task
-import Task from '@/views/modules/task/index'
-import TaskDetail from '@/views/modules/task/detail'
-import TaskHistory from '@/views/modules/task/history'
+import Task from '@/modules/task/index'
+import TaskDetail from '@/modules/task/detail'
+import TaskHistory from '@/modules/task/history'
 // module done
-import Clock from '@/views/modules/done/index'
-import ClockSupplement from '@/views/modules/done/supplement'
-import ClockInterruption from '@/views/modules/done/interruption'
+import Clock from '@/modules/done/index'
+import ClockSupplement from '@/modules/done/supplement'
+import ClockInterruption from '@/modules/done/interruption'
 // module statistics
-import Statistics from '@/views/modules/statistics/index'
-import StatisticsClock from '@/views/modules/statistics/clock'
-import StatisticsTask from '@/views/modules/statistics/task'
+import Statistics from '@/modules/statistics/index'
+import StatisticsClock from '@/modules/statistics/clock'
+import StatisticsTask from '@/modules/statistics/task'
 // module goal
-import Goal from '@/views/modules/goal/index'
-import GoalSetup from '@/views/modules/goal/setup'
+import Goal from '@/modules/goal/index'
+import GoalSetup from '@/modules/goal/setup'
 // module progress
-import Progress from '@/views/modules/progress/index'
+import Progress from '@/modules/progress/index'
 
 Vue.use(Router)
 
@@ -28,7 +28,7 @@ export default new Router({
       component: Progress
     },
     {
-      path: '/task',
+      path: '/',
       name: 'Task',
       component: Task,
       children: [
@@ -89,6 +89,6 @@ export default new Router({
           component: GoalSetup
         }
       ]
-    },
+    }
   ]
 })
