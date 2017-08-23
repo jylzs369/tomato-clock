@@ -1,22 +1,29 @@
 <template>
-  <div id="app">
+  <main id="app">
+    <header-bar></header-bar>
     <router-view></router-view>
-  </div>
+    <menu-bar></menu-bar>
+  </main>
 </template>
 
 <script>
+import HeaderBar from '@/components/header'
+import MenuBar from '@/components/menu'
 export default {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+    }
+  },
+  components: {
+    HeaderBar,
+    MenuBar
+  },
+  methods: {
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import './assets/styles/app.css';
 </style>
