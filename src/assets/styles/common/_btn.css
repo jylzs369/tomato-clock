@@ -1,0 +1,21 @@
+.btn {
+    display: inline-block;
+    width: 100%;
+    color: var(--white);
+    font-size: var(--font-base);
+    line-height: 1.75;
+    padding: .5em 0;
+    outline: 0;
+    border: 0;
+    border-radius: var(--border-radius);
+}
+.btn.primary {
+    background: var(--primary);
+}
+.btn.break {
+    background: var(--break);
+}
+button {
+    outline: 0;
+    border: 0;
+}

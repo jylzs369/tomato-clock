@@ -1,0 +1,261 @@
+html, body {
+    font-family: var(--font-zn);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--text-dark);
+    background: var(--white);
+    min-width: 320px;
+    font-size: var(--font-base);
+}
+
+body {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transform: translate3d(0, 0, 0);
+}
+* {
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+button, 
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+img {
+  width: 100%;
+  font-size: 0;
+  line-height: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  line-height: normal;
+}
+a {
+  text-decoration: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+@font-face {font-family: "tomato-icon";
+  src: url('//at.alicdn.com/t/font_250008_pgego7908bjd1jor.eot?t=1503478036697'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_250008_pgego7908bjd1jor.eot?t=1503478036697#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_250008_pgego7908bjd1jor.woff?t=1503478036697') format('woff'), /* chrome, firefox */
+  url('//at.alicdn.com/t/font_250008_pgego7908bjd1jor.ttf?t=1503478036697') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_250008_pgego7908bjd1jor.svg?t=1503478036697#tomato-icon') format('svg'); /* iOS 4.1- */
+}
+
+.tomato-icon {
+  font-family:"tomato-icon" !important;
+  font-size: var(--font-base);
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bar:before { content: "\e60d"; }
+
+.icon-user:before { content: "\e609"; }
+
+.icon-list:before { content: "\e608"; }
+
+.icon-clock:before { content: "\e60a"; }
+
+/* typesetting */
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+main {
+  padding: var(--padding-large-horizontal);
+  margin-bottom: var(--padding-large-horizontal);
+  background: var(--white);
+}
+.content {
+  background: var(--white);
+}
+no-padding {
+  padding: 0;
+}
+.no-margin {
+  margin: 0;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex > * {
+  flex: 1
+}
+
+/* color */
+.color-primary {
+  color: var(--primary);
+}
+.color-dark {
+  color: var(--text-dark);
+}
+.color-gray {
+  color: var(--text-gray);
+}
+.color-light {
+  color: var(--text-light);
+}
+
+/* border */
+.border {
+  border: var(--border);
+}
+.border-top {
+  border-top: var(--border);
+}
+.border-left {
+  border-left: var(--border);
+}
+.border-right {
+  border-right: var(--border);
+}
+.border-bottom {
+  border-bottom: var(--border);
+}
+.border-vertical {
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+.border-horizontal {
+  border-left: var(--border);
+  border-right: var(--border);
+}
+
+/* text-align*/
+.tc {
+  text-align: center;
+}
+.tl {
+  text-align: left;
+}
+.tr {
+  text-align: right;
+}
+
+/* font family */
+.font-en {
+  font-family: var(--font-en);
+}
+/* font-size*/
+.font-largest {
+  font-size: var(--font-largest);
+}
+.font-larger {
+  font-size: var(--font-larger);
+}
+
+.font-large {
+  font-size: var(--font-large);
+}
+
+.font-small {
+  font-size: var(--font-small);
+}
+
+.font-smaller {
+  font-size: var(--font-smaller);
+}
+
+.font-smallest {
+  font-size: var(--font-smallest);
+}
+
+.toast {
+  position: fixed;
+  z-index: 9999;
+  top: 30%;
+  left: 50%;
+  max-width: 80%;
+  transform: translateX(-50%);
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 80%;
+  color: #fff;
+  background: rgba(0, 0, 0, .7);
+  padding: .5em 1em;
+  border-radius: .5em;
+}
+
+.toast.fade-in {
+  animation: fadeIn linear 0.25s forwards;
+}
+.toast.fade-out {
+  animation: fadeOut linear 0.25s forwards;
+}
+
+.fade-enter-active {
+  animation: fadeIn linear 0.25s forwards;
+}
+.fade-leave-active {
+  animation: fadeOut linear 0.25s forwards;
+}
+.slide-enter-active {
+  animation: slideIn linear 0.25s forwards;
+}
+.slide-leave-active {
+  animation: slideOut linear 0.25s forwards;
+}
+
+.slide-enter-active {
+  animation: slideIn linear 0.25s forwards;
+}
+.slide-leave-active {
+  animation: slideOut linear 0.25s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
