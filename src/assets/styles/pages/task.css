@@ -1,0 +1,13 @@
+.task .new {
+  margin: var(--padding-vertical) 0;
+}
+.task .list .title {
+  flex: 8;
+}
+.task .list li {
+  line-height: 1.5;
+}
+.task .list .tag {
+  font-style: normal;
+  color: var(--tag);
+}
