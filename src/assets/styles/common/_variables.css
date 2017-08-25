@@ -1,32 +1,34 @@
 :root {
-  // color
+  /* color */
   --primary: #F1604D;
   --break: #45DBBE;
   --tag: #5E93D0;
   --text-dark: #333;
   --text-gray: #999;
   --text-light: #ccc;
+  --text-lighter: #eee;
   --white: #fff;
   
   --bg: #fbfbfb;
 
-  // border
-  --border: .5px solid var(--text-light);
+  /* border */
+  --border: .5px solid currentColor;
   --border-radius: .3em;
 
-  // font family 
+  /* font family  */
   --font-zn: 'Microsoft Yahei';
   --font-en: 'Arial';
 
-  // font size
-  --font-base: calc(100vw / 20px);
-  --font-lage: 120%;
-  --font-lager: 150%;
-  --font-lagest: 200%;
+  /* font size */
+  --font-base: calc(100vw / 20);
+  --font-large: 120%;
+  --font-larger: 150%;
+  --font-largest: 200%;
   --font-small: 90%;
   --font-smaller: 80%;
   --font-smallest: 75%;
-  // padding
+
+  /* padding */
   --padding-vertical: calc(var(--font-base) * 0.5);
   --padding-horizontal: calc(var(--font-base) * 0.8);
 }

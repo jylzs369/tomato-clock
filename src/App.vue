@@ -1,9 +1,9 @@
 <template>
-  <main id="app">
+  <section id="app" :class="">
     <header-bar></header-bar>
     <router-view></router-view>
     <menu-bar></menu-bar>
-  </main>
+  </section>  
 </template>
 
 <script>

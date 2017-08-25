@@ -4,9 +4,11 @@
     color: var(--white);
     font-size: var(--font-base);
     line-height: 1.75;
-    padding: .5em 0;
+    padding: .5em var(--padding-horizontal);
     outline: 0;
     border: 0;
+}
+.btn.radius {
     border-radius: var(--border-radius);
 }
 .btn.primary {
@@ -14,6 +16,10 @@
 }
 .btn.break {
     background: var(--break);
+}
+.btn.gray {
+    color: var(--text-lighter);
+    background: var(--white);
 }
 button {
     outline: 0;
