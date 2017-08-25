@@ -1,0 +1,21 @@
+.list {
+  overflow-y: scroll;
+}
+.list li {
+  position: relative;
+  padding: var(--padding-horizontal);
+  background: var(--white);
+  border-bottom: var(--border);
+}
+/* .list li::after {
+  content: '';
+  position: absolute;
+  bottom: .5px;
+  width: 100%;
+  height: .5px;
+  background: currentColor;
+} */
+.list input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
