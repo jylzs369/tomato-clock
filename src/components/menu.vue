@@ -9,3 +9,8 @@
     <router-link tag="a" to="" class="tomato-icon icon-user"></router-link>
   </footer>
 </template>
+
+<script>
+  export default {
+  }
+</script>

@@ -1,7 +1,9 @@
 <template>
   <section id="app" :class="">
     <header-bar></header-bar>
-    <router-view></router-view>
+    <main>
+      <router-view></router-view>
+    </main>
     <menu-bar></menu-bar>
   </section>  
 </template>
