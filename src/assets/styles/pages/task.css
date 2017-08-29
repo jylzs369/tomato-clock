@@ -1,5 +1,12 @@
+.task {
+  height: 100%;
+}
 .task .new {
+  height: 3em;
   margin: var(--padding-vertical) 0;
+}
+.task .list {
+  height: calc(100vh - 5.5em - var(--padding-vertical) * 2 - 3em);
 }
 .task .list .title {
   flex: 8;

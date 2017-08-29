@@ -1,7 +1,7 @@
 <template>
-  <main class="task">
-    <button class="btn gray tl new border-vertical">添加新任务</button>
-    <ul class="list color-lighter border-top">
+  <div class="task">
+    <button class="btn gray tl new border-vertical" @click="location.reload()">添加新任务</button>
+    <ul class="list scroll color-lighter">
       <router-link tag="li" class="flex" :to="{name: 'TaskDetail'}" v-for="(task, index) in tasks" :key="index">
         <span>
           <input :id="`task${task.id}`" type="checkbox" value="task.id" v-model="done" @click="console.log(done)" />
@@ -14,7 +14,7 @@
         </span>
       </router-link>
     </ul>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -95,6 +95,33 @@ export default {
           ],
           title: '任务3',
           todo: false
+        },
+        {
+          id: 1,
+          tags: [
+            '标签1',
+            '标签2'
+          ],
+          title: '任务3',
+          todo: false
+        },
+        {
+          id: 1,
+          tags: [
+            '标签1',
+            '标签2'
+          ],
+          title: '任务3',
+          todo: false
+        },
+        {
+          id: 1,
+          tags: [
+            '标签1',
+            '标签2'
+          ],
+          title: '任务3',
+          todo: false
         }
       ]
     }
@@ -103,6 +130,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-</style>
