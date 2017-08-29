@@ -7,11 +7,10 @@ html, body {
     min-width: 320px;
     font-size: var(--font-base);
 }
-
 body {
-  position: absolute;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   transform: translate3d(0, 0, 0);
 }
 * {
@@ -93,25 +92,6 @@ input[type="radio"] {
 .icon-submit:before { content: "\e606"; }
 
 /* typesetting */
-.break .break {
-  background: var(--break);
-}
-.white {
-  background: var(--white);
-}
-.fullscreen {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-main {
-  padding: var(--padding-large-horizontal);
-  margin-top: 9vh;
-  margin-bottom: var(--padding-large-horizontal);
-}
-.content {
-  background: var(--white);
-}
 no-padding {
   padding: 0;
 }
