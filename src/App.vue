@@ -3,6 +3,7 @@
     <header-bar></header-bar>
     <main>
       <router-view></router-view>
+      <tag-filter></tag-filter>
     </main>
     <menu-bar></menu-bar>
   </section>  
@@ -11,6 +12,7 @@
 <script>
 import HeaderBar from '@/components/header'
 import MenuBar from '@/components/menu'
+import TagFilter from '@/components/tagFilter'
 export default {
   name: 'app',
   data () {
@@ -19,7 +21,8 @@ export default {
   },
   components: {
     HeaderBar,
-    MenuBar
+    MenuBar,
+    TagFilter
   },
   methods: {
   }
