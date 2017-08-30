@@ -5,6 +5,23 @@
   height: 3em;
   margin: var(--padding-vertical) 0;
 }
+.task.flow::before {
+  content: '';
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .85);
+}
+.task.flow .new {
+  position: relative;
+  background: var(--bg);
+  caret-color: var(--primary);
+  color: var(--text);
+  z-index: 3;
+}
 .task .list {
   height: calc(100vh - 5.5em - var(--padding-vertical) * 2 - 3em);
 }
