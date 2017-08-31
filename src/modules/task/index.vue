@@ -1,6 +1,7 @@
 <template>
   <div class="task">
     <div class="mask" v-show="createTaskFocus" @click="createTask"></div>
+    {{ count }}
     <input type="text" class="btn gray tl new border-vertical" @click="openTaskCreater" v-model="newTaskName" placeholder="添加新任务" />
     <ul class="list scroll color-lighter">
       <router-link tag="li" class="flex" :to="{name: 'TaskDetail'}" v-for="(task, index) in tasks" :key="index">
@@ -17,15 +18,21 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   data () {
     return {
       done: new Set(),
       todo: new Set(),
-      task: [],
+      tasks: [],
       newTaskName: '',
       filterTagsBtnShow: false,
       createTaskFocus: false
+    }
+  },
+  computed: {
+    count () {
+      return this.$store.state.idCounter
     }
   },
   created () {
@@ -35,7 +42,8 @@ export default {
         'tags|0-1': ['标签1', '@cword(2)'],
         'title': '@ctitle',
         'done': false,
-        'todo': false
+        'todo': false,
+        'click|0-10': 0
       }]
     })
     this.$axios.get('/tasks').then((res) => {
@@ -44,6 +52,9 @@ export default {
     })
   },
   methods: {
+    ...mapMutations([
+      'increment'
+    ]),
     createTask () {
       let newTask = {
         id: 13,
@@ -55,6 +66,7 @@ export default {
       console.log(newTask)
     },
     openTaskCreater () {
+      this.increment()
       this.createTaskFocus = true
     },
     switchProperty (obj, property) {
