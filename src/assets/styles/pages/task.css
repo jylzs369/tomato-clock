@@ -5,7 +5,7 @@
   height: 3em;
   margin: var(--padding-vertical) 0;
 }
-.task.flow::before {
+.task .mask {
   content: '';
   position: fixed;
   z-index: 2;
@@ -15,12 +15,11 @@
   bottom: 0;
   background: rgba(0, 0, 0, .85);
 }
-.task.flow .new {
+.task .mask .flow {
   position: relative;
-  background: var(--bg);
+  top: 3em;
   caret-color: var(--primary);
   color: var(--text);
-  z-index: 3;
 }
 .task .list {
   height: calc(100vh - 5.5em - var(--padding-vertical) * 2 - 3em);

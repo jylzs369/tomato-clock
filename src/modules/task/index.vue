@@ -1,8 +1,12 @@
 <template>
   <div class="task">
-    <div class="mask" v-show="createTaskFocus" @click="createTask"></div>
+    <transition name="fade">
+      <div class="mask" v-show="createTaskFocus" @click="createTask">
+        <input type="text" class="btn gray tl new flow" @click.stop="" @keyup.enter="createTask" v-model="newTaskName" placeholder="添加新任务" />
+      </div>
+    </transition>
+    <input type="text" class="btn gray tl new border-vertical" @click="openTaskCreater" placeholder="添加新任务" />
     {{ count }}
-    <input type="text" class="btn gray tl new border-vertical" @click="openTaskCreater" v-model="newTaskName" placeholder="添加新任务" />
     <ul class="list scroll color-lighter">
       <router-link tag="li" class="flex" :to="{name: 'TaskDetail'}" v-for="(task, index) in tasks" :key="index">
         <span>
@@ -52,9 +56,9 @@ export default {
     })
   },
   methods: {
-    ...mapMutations([
-      'increment'
-    ]),
+    ...mapMutations({
+      'increment': 'INCREMENT'
+    }),
     createTask () {
       let newTask = {
         id: 13,
@@ -64,10 +68,18 @@ export default {
         todo: false
       }
       console.log(newTask)
+      this.createTaskFocus = false
     },
     openTaskCreater () {
       this.increment()
       this.createTaskFocus = true
+    },
+    generateAction (condition, handler) {
+      console.log(condition)
+      if (condition) {
+        console.log(1)
+        return handler()
+      }
     },
     switchProperty (obj, property) {
       obj[property] = !obj[property]
